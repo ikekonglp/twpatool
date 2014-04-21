@@ -21,8 +21,7 @@ public class MWERelabeler {
 		return res;
 	}
 	
-	public static void printForLabel(File output, File indexf){
-		ArrayList<ConllSentence> corpus = new ArrayList<ConllSentence>();
+	public static void printForLabel(ArrayList<ConllSentence> corpus, File output, File indexf){
 		LineWriter lw_output = new LineWriter(output);
 		LineWriter lw_indexf = new LineWriter(indexf);
 		
@@ -45,7 +44,7 @@ public class MWERelabeler {
 	}
 	
 	public static void main(String[] args) {
-
+		printForLabel(readCorpus(new File("inputf")), new File("test1"), new File("test2"));
 	}
 
 }
