@@ -16,7 +16,9 @@ public class ConllSentence {
 		ArrayList<Integer> headlist = getMWEHeadList();
 		ArrayList<MWE> mwes = new ArrayList<MWE>();
 		for(int head : headlist){
-			mwes.add(getMWEAt(head));
+			MWE mwe = getMWEAt(head);
+			mwe.sentenceID = i;
+			mwes.add(mwe);
 		}
 		return mwes;
 	}

@@ -9,11 +9,14 @@ public class MWERelabeler {
 		ArrayList<String> lineBuffer = new ArrayList<String>();
 		while(lr.hasNextLine()){
 			String line = lr.readNextLine().trim();
-			if(lr.equals("")){
+			if(line.equals("")){
 				// A sentence is completed
 				ConllSentence cs = new ConllSentence();
 				cs.setLines(lineBuffer);
+				res.add(cs);
+				
 				lineBuffer = new ArrayList<String>();
+				continue;
 			}
 			lineBuffer.add(line);
 		}
@@ -44,7 +47,8 @@ public class MWERelabeler {
 	}
 	
 	public static void main(String[] args) {
-		printForLabel(readCorpus(new File("inputf")), new File("test1"), new File("test2"));
+		printForLabel(readCorpus(new File("/home/lingpenk/GFL/ad3_exp/train")), new File("test1"), new File("test2"));
+	
 	}
 
 }

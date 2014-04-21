@@ -18,10 +18,11 @@ public class MWE {
 		String content = "";
 		for (int i = 0; i < tokens.size(); i++) {
 			index = index + originalPositions.get(i) + " ";
-			content = content + (i + 1) + "\t" + tokens.get(i) + "_\t"
+			content = content + (i + 1) + "\t" + tokens.get(i) + "\t_\t"
 					+ postags.get(i) + "\t" + postags.get(i) + "\t"
 					+ "_\t0\t_\t_\t_\t" + bc4strings.get(i) + "\t"
-					+ bc6strings.get(i) + "\t" + bcallstrings.get(i) + "\n";
+					+ bc6strings.get(i) + "\t" + bcallstrings.get(i) + "\t1" + "\n";
+			
 		}
 		index = index.trim();
 		buffer.add(index);
