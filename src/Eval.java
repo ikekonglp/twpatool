@@ -35,9 +35,11 @@ public class Eval {
 	
 	
 	public static void main(String[] args){
-		File fg = new File("/home/lingpenk/GFL/ad3_exp/test");
-		File fs = new File("/home/lingpenk/GFL/ad3_exp/prediction");
-
+		String working_dir = "/home/lingpenk/GFL/ad3_exp_foster/";
+		File fg = new File(working_dir+ "test");
+		//File fs = new File(working_dir + "prediction_withptb");
+		File fs = new File(working_dir + "ptb_single_predict_test");
+		
 		
 		//565.0 740.0 0.7635135135135135
 

@@ -96,4 +96,11 @@ public class ConllSentence {
 	private String getBCAll(String s){
 		return getFieldAt(s, 12);
 	}
+	public String printString() {
+		String s = "";
+		for(String ss : lines){
+			s = s + ss + "\n";
+		}
+		return s;
+	}
 }
