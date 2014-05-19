@@ -126,10 +126,18 @@ public class MWERelabeler {
 	public static void main(String[] args) {
 //		printForLabel(readCorpus(new File("/home/lingpenk/GFL/ad3_exp/test")),
 //				new File("/home/lingpenk/GFL/ad3_exp/mwe_test_index"), new File("/home/lingpenk/GFL/ad3_exp/mwe_test"));
-		mergeWithOriginalFile(readCorpus(new File(
-				"/home/lingpenk/GFL/ad3_exp/test")), readCorpus(new File(
-				"/home/lingpenk/GFL/ad3_exp/predict_test_mwe")), new File("/home/lingpenk/GFL/ad3_exp/mwe_test_index"), new File("/home/lingpenk/GFL/ad3_exp/test_modify_mwe"));
+//		mergeWithOriginalFile(readCorpus(new File(
+//				"/home/lingpenk/GFL/ad3_exp/test")), readCorpus(new File(
+//				"/home/lingpenk/GFL/ad3_exp/predict_test_mwe")), new File("/home/lingpenk/GFL/ad3_exp/mwe_test_index"), new File("/home/lingpenk/GFL/ad3_exp/test_modify_mwe"));
 
+//		printForLabel(readCorpus(new File("/home/lingpenk/GFL/emnlp_exp/corpus/processed/conll/all.conll")),
+//				new File("/home/lingpenk/GFL/emnlp_exp/corpus/processed/conll/mwe_all_index"), new File("/home/lingpenk/GFL/emnlp_exp/corpus/processed/conll/mwe_all"));
+
+		mergeWithOriginalFile(readCorpus(new File(
+				"/home/lingpenk/GFL/emnlp_exp/corpus/processed/conll/all.conll")), readCorpus(new File(
+				"/home/lingpenk/GFL/emnlp_exp/corpus/processed/conll/mwe_all_predict")), new File("/home/lingpenk/GFL/emnlp_exp/corpus/processed/conll/mwe_all_index"), new File("/home/lingpenk/GFL/emnlp_exp/corpus/processed/conll/all_mwe_preprocessed.conll"));
+
+		
 	}
 
 }
